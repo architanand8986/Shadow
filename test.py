@@ -16,7 +16,7 @@ import utils
 parser = argparse.ArgumentParser(description='ShadowFormer Inference Without GT')
 parser.add_argument('--input_dir', default='ISTD_Dataset/test',
     type=str, help='Directory of validation images')
-parser.add_argument('--result_dir', default='Results',
+parser.add_argument('--result_dir', default='/content/Result',
     type=str, help='Directory for results')
 parser.add_argument('--weights', default='ISTD_model_latest.pth',
     type=str, help='Path to weights')
@@ -39,8 +39,8 @@ parser.add_argument('--vit_share', action='store_true', default=False)
 parser.add_argument('--train_ps', type=int, default=320)
 parser.add_argument('--tile', type=int, default=None)
 parser.add_argument('--tile_overlap', type=int, default=32)
-parser.add_argument('--shadow_dir', default="ISTD_Dataset/test/test_A", type=str, help='Directory of input shadow images')
-parser.add_argument('--mask_dir', default="ISTD_Dataset/test/test_B", type=str, help='Directory of binary masks')
+parser.add_argument('--shadow_dir', default="/content/shadow/Shadow_A", type=str, help='Directory of input shadow images')
+parser.add_argument('--mask_dir', default="/content/shadow/Shadow_B", type=str, help='Directory of binary masks')
 
 args = parser.parse_args()
 
